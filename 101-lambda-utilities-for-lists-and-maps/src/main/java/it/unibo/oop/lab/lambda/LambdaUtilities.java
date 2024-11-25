@@ -85,7 +85,7 @@ public final class LambdaUtilities {
         /*
          * Suggestion: consider Map.merge
          */
-        Map<R, Set<T>> returnMap = new HashMap<>();
+        final Map<R, Set<T>> returnMap = new HashMap<>();
         list.forEach(t -> {
             returnMap.merge(op.apply(t), Set.of(t), (Set<T> oldSet, Set<T> newValue) -> {
                 final Set<T> newSet = new HashSet<>();
