@@ -78,7 +78,7 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
             this.model = new DrawNumberImpl(new Configuration.Builder().build());
         }
     }
-
+    
     private void displayErrorViews(String error) {
         for (DrawNumberView drawNumberView : views) {
             drawNumberView.displayError(error);

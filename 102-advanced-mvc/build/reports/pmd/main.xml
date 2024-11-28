@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 https://pmd.github.io/schema/report_2_0_0.xsd" version="7.7.0" timestamp="2024-11-28T11:41:12.834">
+<file name="/Users/sohaibouakani/Desktop/OOP/Laboratorio/lab10/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/Configuration.java">
+<violation beginline="73" endline="73" begincolumn="25" endcolumn="33" rule="RedundantFieldInitializer" ruleset="Performance" package="it.unibo.mvc" class="Builder" variable="consumed" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_performance.html#redundantfieldinitializer" priority="3">
+Avoid using redundant field initializer for 'consumed'
+</violation>
+<violation beginline="79" endline="79" begincolumn="24" endcolumn="30" rule="LinguisticNaming" ruleset="Code Style" package="it.unibo.mvc" class="Builder" method="setMin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The setter 'setMin' should not return any type except void linguistically
+</violation>
+<violation beginline="88" endline="88" begincolumn="24" endcolumn="30" rule="LinguisticNaming" ruleset="Code Style" package="it.unibo.mvc" class="Builder" method="setMax" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The setter 'setMax' should not return any type except void linguistically
+</violation>
+<violation beginline="97" endline="97" begincolumn="24" endcolumn="35" rule="LinguisticNaming" ruleset="Code Style" package="it.unibo.mvc" class="Builder" method="setAttempts" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The setter 'setAttempts' should not return any type except void linguistically
+</violation>
+</file>
+<file name="/Users/sohaibouakani/Desktop/OOP/Laboratorio/lab10/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/DrawNumberApp.java">
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="85" rule="UnnecessaryModifier" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="DrawNumberApp" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'final' on resource specification 'r': resource specifications are implicitly final
+</violation>
+<violation beginline="44" endline="44" begincolumn="33" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="DrawNumberApp" variable="configLine" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'configLine' could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="24" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="DrawNumberApp" variable="option" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'option' could be declared final
+</violation>
+<violation beginline="46" endline="46" begincolumn="24" endcolumn="29" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="DrawNumberApp" variable="value" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'value' could be declared final
+</violation>
+<violation beginline="82" endline="82" begincolumn="43" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="displayErrorViews" variable="error" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'error' is not assigned and could be declared final
+</violation>
+<violation beginline="83" endline="83" begincolumn="29" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberApp" method="displayErrorViews" variable="drawNumberView" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'drawNumberView' could be declared final
+</violation>
+</file>
+<file name="/Users/sohaibouakani/Desktop/OOP/Laboratorio/lab10/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/DrawNumberImpl.java">
+<violation beginline="20" endline="20" begincolumn="41" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberImpl" method="DrawNumberImpl" variable="configuration" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'configuration' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/sohaibouakani/Desktop/OOP/Laboratorio/lab10/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/DrawNumberViewImpl.java">
+<violation beginline="122" endline="122" begincolumn="37" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="DrawNumberViewImpl" method="displayError" variable="message" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/sohaibouakani/Desktop/OOP/Laboratorio/lab10/lab10/102-advanced-mvc/src/main/java/it/unibo/mvc/PrintStreamView.java">
+<violation beginline="62" endline="62" begincolumn="37" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="PrintStreamView" method="displayError" variable="message" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+</pmd>
