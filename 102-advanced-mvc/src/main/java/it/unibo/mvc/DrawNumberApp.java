@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -35,15 +36,19 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
             view.start();
         }
         //this.model = new DrawNumberImpl(MIN, MAX, ATTEMPTS);
+        this.model = new DrawNumberImpl(this.configurationSetter());
+    }
+
+    private Configuration configurationSetter() {
         final Configuration.Builder configurationBuilder = new Configuration.Builder();
         try (
-            final BufferedReader r = new BufferedReader(new InputStreamReader(PATH));
+            BufferedReader r = new BufferedReader(new InputStreamReader(PATH, StandardCharsets.UTF_8));
         ) {
             String line = r.readLine();
             while (Objects.nonNull(line)) {
-                StringTokenizer configLine = new StringTokenizer(line, ": ");
-                String option;
-                String value;
+                final StringTokenizer configLine = new StringTokenizer(line, ": ");
+                final String option;
+                final String value;
                 if (configLine.countTokens() == 2) {
                     option = configLine.nextToken();
                     value = configLine.nextToken();
@@ -54,16 +59,16 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
                     case "maximum":
                         configurationBuilder.setMax(Integer.parseInt(value));
                         break;
-                    
+
                     case "minimum":
                         configurationBuilder.setMin(Integer.parseInt(value));
                         break;
-                    
+
                     case "attempts":
                         configurationBuilder.setAttempts(Integer.parseInt(value));
                         break;
                     default:
-                        throw new IllegalArgumentException("not recognized valure has been passed on the config file");
+                        throw new IllegalArgumentException("not recognized value has been passed on the config file");
                 }
                 line = r.readLine();
             }
@@ -72,15 +77,16 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
         }
         final Configuration config = configurationBuilder.build();
         if (config.isConsistent()) {
-            this.model = new DrawNumberImpl(config);
+            return config;
         } else {
             displayErrorViews("configuation not valid, using default configuration");
-            this.model = new DrawNumberImpl(new Configuration.Builder().build());
+            return new Configuration.Builder().build();
         }
+
     }
-    
-    private void displayErrorViews(String error) {
-        for (DrawNumberView drawNumberView : views) {
+
+    private void displayErrorViews(final String error) {
+        for (final DrawNumberView drawNumberView : views) {
             drawNumberView.displayError(error);
         }
     }

@@ -17,7 +17,7 @@ public final class DrawNumberImpl implements DrawNumber {
     /**
      * @throws IllegalStateException if the configuration is not consistent
      */
-    public DrawNumberImpl(Configuration configuration) {
+    public DrawNumberImpl(final Configuration configuration) {
         if (configuration.isConsistent()) {
             this.attempts = configuration.getAttempts();
             this.max = configuration.getMax();
